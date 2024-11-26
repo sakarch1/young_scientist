@@ -778,41 +778,225 @@ body.sidebar-closed {
   margin-left: 10px;
 }
 
-/* Styling the Expand All Button */
+.course-container {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
 .expand-btn {
-  background-color: #3498db;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border: 1px solid #F2F4F5;
+  border-radius: 15px;
+  background-color: #F2F4F5;
+  padding: 7px 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+
+.arrow-down::before {
+  content: "▼";
+  font-size: 12px;
+}
+
+.arrow-up::before {
+  content: "▲";
+  font-size: 12px;
+}
+
+.course-section {
+  border-top: 1px solid #ccc;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.lesson {
+  margin: 10px 0;
+}
+
+.lesson-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.lesson-header .arrow {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+
+
+.lesson-content {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  display: none;
+  /* Initially hidden */
+}
+
+.lesson-content ul li {
+  list-style-type: inherit;
+  margin-left: 150px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.lesson-info {
+  font-size: 14px;
+  color: #666;
+}
+
+.lock-icon {
+  margin-left: 5px;
+  color: #999;
+}
+
+.course-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 25%;
+  background: #f8f9fa;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar h5 {
+  margin-bottom: 20px;
+}
+
+.lesson-list {
+  list-style: none;
+  padding: 0;
+}
+
+.lesson-list li {
+  margin-bottom: 10px;
+}
+
+.lesson-list a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.lesson-list a.active {
+  background: #007bff;
+  color: white;
+}
+
+.lesson-list a:hover {
+  background: #ddd;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.progress {
+  margin: 20px 0;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #007bff;
+}
+
+.btn-primary {
+  background: #007bff;
   color: white;
   padding: 10px 20px;
   border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+}
+
+.scrollable-content {
+  width: 49%;
+  height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0px;
+  margin: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.scrollable-content p {
+  margin: 10px 0;
+}
+
+/* Info card styling */
+.info-card {
+  width: 50%;
+  /* Adjust width to match layout */
+  background-color: #fff;
+  margin-left: 620px;
+  /* Background for card */
+  border: 1px solid #ddd;
+  margin-top: -380px;
+  /* Border to separate card */
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  /* Optional for effect */
+}
+
+/* Previous button styling */
+.prev-button {
+  background-color: #4CAF50;
+  /* Green color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
   cursor: pointer;
   font-size: 16px;
-  margin-left: 580px;
-  margin-top: -130px;
-  display: flex;
-  transition: all 0.3s ease;
-}
-
-.expand-btn:hover {
-  background-color: #2980b9;
-}
-
-.expand-btn i {
-  margin-top: 2px;
-  margin-right: 10px;
-  font-size: 18px;
-}
-
-/* Course Content Section */
-.course-content {
-  margin-top: 20px;
-  font-size: 16px;
-  padding: 10px;
-  background-color: #f8f9fa;
+  margin-bottom: 20px;
+  display: inline-block;
   border-radius: 5px;
-  border: 1px solid #ddd;
+  /* Rounded corners */
 }
 
-/* Hidden Course Content */
-.course-content.hidden {
-  display: none;
+.prev-button:hover {
+  background-color: #45a049;
+  /* Darker green on hover */
+}
+
+/* Code block styling */
+.code-block {
+  background-color: #f4f4f4;
+  border-left: 4px solid #4CAF50;
+  /* Highlight on the left */
+  padding: 10px;
+  font-family: monospace;
+  font-size: 16px;
+  overflow-x: auto;
+  /* Horizontal scrolling for long code lines */
+}
+
+.contents {
+  margin-left: 400px;
 }
